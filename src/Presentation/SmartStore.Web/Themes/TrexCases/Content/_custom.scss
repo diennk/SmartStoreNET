@@ -6,6 +6,12 @@
 .menubar-inverse.menubar-section{
     border: 0
 }
+.menubar-link {
+    padding: 0.5em 0.8em;
+}
+.artlist{
+    margin-bottom: 0;
+}
 .art {
     margin-left: 0;
 }
@@ -15,4 +21,9 @@
 
 .recently-viewed-product-grid .art{
     border-color: transparent !important
+}
+
+.artlist-grid.artlist-boxed .art {
+    box-shadow: none;
+    border: 1px solid #dee2e6
 }
