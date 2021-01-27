@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\LibSassHost.Native.win-x86.1.2.6\build\LibSassHost.Native.win-x86.props" Condition="Exists('..\..\packages\LibSassHost.Native.win-x86.1.2.6\build\LibSassHost.Native.win-x86.props')" />
   <Import Project="..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
   <Import Project="..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x86.3.5.5\build\net45\JavaScriptEngineSwitcher.V8.Native.win-x86.props" Condition="Exists('..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x86.3.5.5\build\net45\JavaScriptEngineSwitcher.V8.Native.win-x86.props')" />
   <Import Project="..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x64.3.5.5\build\net45\JavaScriptEngineSwitcher.V8.Native.win-x64.props" Condition="Exists('..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x64.3.5.5\build\net45\JavaScriptEngineSwitcher.V8.Native.win-x64.props')" />
-  <Import Project="..\..\packages\LibSassHost.Native.win-x86.1.2.6\build\LibSassHost.Native.win-x86.props" Condition="Exists('..\..\packages\LibSassHost.Native.win-x86.1.2.6\build\LibSassHost.Native.win-x86.props')" />
   <Import Project="..\..\packages\LibSassHost.Native.win-x64.1.2.6\build\LibSassHost.Native.win-x64.props" Condition="Exists('..\..\packages\LibSassHost.Native.win-x64.1.2.6\build\LibSassHost.Native.win-x64.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -1602,6 +1602,7 @@
     <Content Include="Scripts\public.common.js" />
     <Content Include="Scripts\smartstore.jquery.utils.js" />
     <Content Include="Scripts\smartstore.system.js" />
+    <Content Include="Themes\TrexCases\preview.png" />
     <Content Include="Views\Shared\ConfigureTheme.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1928,6 +1929,15 @@
     <Content Include="Views\News\Partials\NewsSummaryHeading.cshtml" />
     <Content Include="Views\News\Partials\NewsSummaryList.cshtml" />
     <Content Include="Views\Common\Partials\MetaProperties.cshtml" />
+    <Content Include="Themes\TrexCases\Content\_custom.scss" />
+    <Content Include="Themes\TrexCases\Content\_user.scss" />
+    <Content Include="Themes\TrexCases\theme.config" />
+    <Content Include="Themes\TrexCases\Views\Web.config" />
+    <Content Include="Themes\TrexCases\Views\Home\Index.cshtml" />
+    <Content Include="Themes\TrexCases\Views\Home\Above.cshtml" />
+    <Content Include="Themes\TrexCases\Views\Catalog\Partials\HomepageCategories.cshtml" />
+    <Content Include="Themes\TrexCases\Views\Shared\Partials\Product.List.cshtml" />
+    <Content Include="Themes\TrexCases\Views\Shared\Partials\Product.List.Item.cshtml" />
     <None Include="Web.EFMigrations.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -2150,8 +2160,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
     <Error Condition="!Exists('..\..\packages\LibSassHost.Native.win-x64.1.2.6\build\LibSassHost.Native.win-x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\LibSassHost.Native.win-x64.1.2.6\build\LibSassHost.Native.win-x64.props'))" />
-    <Error Condition="!Exists('..\..\packages\LibSassHost.Native.win-x86.1.2.6\build\LibSassHost.Native.win-x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\LibSassHost.Native.win-x86.1.2.6\build\LibSassHost.Native.win-x86.props'))" />
     <Error Condition="!Exists('..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x64.3.5.5\build\net45\JavaScriptEngineSwitcher.V8.Native.win-x64.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x64.3.5.5\build\net45\JavaScriptEngineSwitcher.V8.Native.win-x64.props'))" />
     <Error Condition="!Exists('..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x86.3.5.5\build\net45\JavaScriptEngineSwitcher.V8.Native.win-x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\JavaScriptEngineSwitcher.V8.Native.win-x86.3.5.5\build\net45\JavaScriptEngineSwitcher.V8.Native.win-x86.props'))" />
+    <Error Condition="!Exists('..\..\packages\LibSassHost.Native.win-x86.1.2.6\build\LibSassHost.Native.win-x86.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\LibSassHost.Native.win-x86.1.2.6\build\LibSassHost.Native.win-x86.props'))" />
   </Target>
 </Project>
