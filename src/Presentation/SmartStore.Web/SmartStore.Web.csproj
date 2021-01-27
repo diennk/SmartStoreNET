@@ -1938,6 +1938,7 @@
     <Content Include="Themes\TrexCases\Views\Catalog\Partials\HomepageCategories.cshtml" />
     <Content Include="Themes\TrexCases\Views\Shared\Partials\Product.List.cshtml" />
     <Content Include="Themes\TrexCases\Views\Shared\Partials\Product.List.Item.cshtml" />
+    <Content Include="Themes\TrexCases\Views\Catalog\Partials\HomepageProducts.cshtml" />
     <None Include="Web.EFMigrations.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

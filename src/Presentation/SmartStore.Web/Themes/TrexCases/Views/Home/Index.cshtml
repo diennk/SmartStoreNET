@@ -33,14 +33,14 @@
             Html.RenderAction("PopularProductTags", "Catalog", new { area = "" });
             Html.RenderWidget("home_page_after_tags");
 
-            Html.RenderAction("HomePageNews", "News");
+            //Html.RenderAction("HomePageNews", "News");
             Html.RenderWidget("home_page_after_news");
 
             Html.RenderAction("HomePagePolls", "Poll");
             Html.RenderWidget("home_page_after_polls");
 
 			@* TODO: (mc) find more intelligent way of rendering RecentlyViewedProductsBlock globally *@
-            Html.RenderAction("RecentlyViewedProductsBlock", "Catalog", new { area = "" });
+            //Html.RenderAction("RecentlyViewedProductsBlock", "Catalog", new { area = "" });
 
             Html.RenderWidget("home_page_bottom");
 		}
