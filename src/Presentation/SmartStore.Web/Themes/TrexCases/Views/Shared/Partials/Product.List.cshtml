@@ -98,7 +98,7 @@
 
 @if (Model.PagedList.TotalCount > 0)
 {
-    <div id="@id" class='@String.Join(" ", listCssClasses)'>
+    <div id="@id" class='@String.Join(" ", listCssClasses) border-bottom border-right'>
         @foreach (var product in Model.Items)
         {
             Html.RenderPartial("Product.List.Item", product);
