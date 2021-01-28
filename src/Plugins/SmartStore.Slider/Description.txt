@@ -1,0 +1,8 @@
+﻿FriendlyName: Home Slider
+SystemName: SmartStore.Slider
+Group: CMS
+Version: 4.1.1
+MinAppVersion: 4.1.1
+DisplayOrder: 1
+FileName: SmartStore.Slider.dll
+ResourceRootKey: Plugins.Slider
