@@ -1,50 +1,37 @@
-﻿<div class="home-above border mb-2">
-    @*<div class="row">
-            <div class="col-12 col-md-3">
-                <div class="bg-warning h-100 d-none d-md-block">
+﻿<div class="home-above mb-2">
+    <div class="row">
+            <div class="col-12 col-md-3 order-2 order-md-1">
+                <div class="h-100 mt-2 mt-md-0">
                     @{
                         Html.RenderAction("HomepageCategories", "Catalog");
                     }
                 </div>
             </div>
-            <div class="col-12 col-md-9 pl-md-0">
-                <div class="home-slider bg-gray">
-                    <img src="https://thungnhomchuyendung.com/media/260/file/57f1c57c0584f5daac95.jpg" class="img-fluid" />
-                </div>
-                <div class="home-slider bg-light mt-2">
-                    <div class="row">
-                        <div class="col">
-                            <img src="https://image.dfrobot.com/image/cache/cache3/banner2020/HuskyLens%E5%B0%8FBanner-470x200.jpg" class="img-fluid" />
+            <div class="col-12 col-md-9 pl-md-0 order-1 order-md-2">
+                <div class="border h-100">
+
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide"><img src="https://thungnhomchuyendung.com/media/260/file/57f1c57c0584f5daac95.jpg" class="img-fluid" /></div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                            ...
                         </div>
-                        <div class="col pl-0">
-                            <img src="https://image.dfrobot.com/image/cache/cache3/banner2020/VIP%20Member%20Privileges-470x200.jpg" class="img-fluid" />
-                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
             </div>
-        </div>*@
-
-    @*<div class="home-slider bg-gray border">
-            <img src="https://thungnhomchuyendung.com/media/260/file/57f1c57c0584f5daac95.jpg" class="img-fluid" />
-        </div>*@
-
-    <!-- Slider main container -->
-    <div class="swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide"><img src="https://thungnhomchuyendung.com/media/260/file/57f1c57c0584f5daac95.jpg" class="img-fluid" /></div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            ...
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
 
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    </div>
+    
 </div>
 
 <script>
