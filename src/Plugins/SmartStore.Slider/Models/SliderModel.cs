@@ -12,23 +12,42 @@ namespace SmartStore.Slider.Models
         [SmartResourceDisplayName("Plugins.Slider.Fields.Enabled")]
         public bool Enabled { get; set; }
 
-        public IList<SlideModel> Slides { get; set; } = new List<SlideModel> 
+        //[UIHint("Media"), AdditionalMetadata("album", "catalog")]
+        //[SmartResourceDisplayName("Plugins.Slider.Fields.Picture")]
+        //public string PictureId { get; set; }
+
+        public IList<SlideSettingModel> Slides { get; set; } = new List<SlideSettingModel> 
         {
-            new SlideModel(),
-            new SlideModel(),
-            new SlideModel(),
-            new SlideModel(),
-            new SlideModel()
+            new SlideSettingModel(),
+            new SlideSettingModel(),
+            new SlideSettingModel(),
+            new SlideSettingModel(),
+            new SlideSettingModel()
         };
+
+        [SmartResourceDisplayName("Plugins.Slider.Fields.WidgetZone")]
+        public string WidgetZone { get; set; }
+
     }
 
-    public class SlideModel
+    public class SlideSettingModel
     {
-        [UIHint("Media"), AdditionalMetadata("gallery", "slider")]
+        [UIHint("Media"), AdditionalMetadata("album", "slider")]
         [SmartResourceDisplayName("Plugins.Slider.Fields.Picture")]
-        public string PictureId { get; set; }
+        public int? PictureId { get; set; }
 
         [SmartResourceDisplayName("Plugins.Slider.Fields.Link")]
         public string Link { get; set; }
+    }
+    public class SlideModel
+    {
+        public string PictureUrl { get; set; }
+
+        public string Link { get; set; }
+    }
+
+    public class SliderRenderModel
+    {
+        public IList<SlideModel> SlideModels { get; set; }
     }
 }

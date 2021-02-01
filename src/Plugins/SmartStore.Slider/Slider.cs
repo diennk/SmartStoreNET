@@ -8,11 +8,12 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SmartStore.Core.Logging;
 using SmartStore.Core.Plugins;
+using SmartStore.Services.Cms;
 using SmartStore.Services.Localization;
 
 namespace SmartStore.Slider
 {
-    public class Slider : BasePlugin, IConfigurable
+    public class Slider : BasePlugin, IWidget, IConfigurable
     {
         private readonly SliderSettings _sliderSettings;
         private readonly ILocalizationService _localizationService;
@@ -51,9 +52,34 @@ namespace SmartStore.Slider
             base.Uninstall();
         }
 
-        public void SendSms(string text)
+
+        /// <summary>
+        /// Gets widget zones where this widget should be rendered
+        /// </summary>
+        /// <returns>Widget zones</returns>
+        public IList<string> GetWidgetZones()
         {
-            
+            var zones = new List<string> { "home_page_after_categories" };
+            if (_sliderSettings.WidgetZone.HasValue())
+            {
+                zones = new List<string>
+                {
+                    _sliderSettings.WidgetZone
+                };
+            }
+
+            return zones;
+        }
+
+        public void GetDisplayWidgetRoute(string widgetZone, object model, int storeId, out string actionName, out string controllerName, out RouteValueDictionary routeValues)
+        {
+            actionName = "Render";
+            controllerName = "Slider";
+            routeValues = new RouteValueDictionary()
+            {
+                {"area", SystemName },
+                //{"widgetZone", widgetZone}
+            };
         }
     }
 }

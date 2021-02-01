@@ -1,0 +1,53 @@
+﻿@model SmartStore.Slider.Models.SliderRenderModel
+
+<div class="home-above mb-2">
+    <div class="border h-100">
+
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                @{
+                    if (Model.SlideModels != null)
+                    {
+                        for (var i = 0; i < Model.SlideModels.Count(); i++)
+                        {
+                            <div class="swiper-slide"><img src="@Model.SlideModels[i].PictureUrl" class="img-fluid" /></div>
+                        }
+                    }
+
+                }
+                @*<div class="swiper-slide"><img src="https://bizweb.dktcdn.net/100/343/108/themes/702687/assets/slider_1.png?1593139796996" class="img-fluid" /></div>*@
+                @*<div class="swiper-slide"><img src="https://bizweb.dktcdn.net/100/343/108/themes/702687/assets/slider_2.png?1593139796996" class="img-fluid" /></div>
+        <div class="swiper-slide"><img src="https://bizweb.dktcdn.net/100/343/108/themes/702687/assets/slider_3.png?1593139796996" class="img-fluid" /></div>
+        <div class="swiper-slide"><img src="https://bizweb.dktcdn.net/100/343/108/themes/702687/assets/slider_4.png?1593139796996" class="img-fluid" /></div>
+        <div class="swiper-slide"><img src="https://bizweb.dktcdn.net/100/343/108/themes/702687/assets/slider_5.png?1593139796996" class="img-fluid" /></div>*@
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        loop: true,
+        autoplay: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>

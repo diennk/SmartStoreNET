@@ -1,6 +1,8 @@
 ﻿using SmartStore.Core.Configuration;
 using SmartStore.Slider.Models;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace SmartStore.Slider
 {
@@ -14,6 +16,7 @@ namespace SmartStore.Slider
         /// <summary>
         /// Gets or sets the slides
         /// </summary>
-        public IList<SlideModel> Slides { get; set; }
+        public string Json { get; set; }
+        public string WidgetZone { get;  set; }
     }
 }
