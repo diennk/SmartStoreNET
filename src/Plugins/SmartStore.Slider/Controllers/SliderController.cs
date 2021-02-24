@@ -63,6 +63,7 @@ namespace SmartStore.Slider.Controllers
 
 
         [ChildActionOnly]
+        [AllowAnonymous]
         public ActionResult Render(string widgetZone)
         {
             var model = new SliderRenderModel();
