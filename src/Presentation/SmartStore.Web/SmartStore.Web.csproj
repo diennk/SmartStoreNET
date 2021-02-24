@@ -1963,6 +1963,9 @@
     </Content>
     <Content Include="Themes\LMS\Content\_custom.scss" />
     <Content Include="Themes\LMS\Content\_user.scss" />
+    <Content Include="Themes\LMS\Views\Home\Index.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Web.EFMigrations.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
