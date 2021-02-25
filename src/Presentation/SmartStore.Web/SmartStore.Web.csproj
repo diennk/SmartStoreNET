@@ -1602,6 +1602,9 @@
     <Content Include="Scripts\public.common.js" />
     <Content Include="Scripts\smartstore.jquery.utils.js" />
     <Content Include="Scripts\smartstore.system.js" />
+    <Content Include="Themes\LMS\Content\logo.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Themes\LMS\preview.png" />
     <Content Include="Themes\TrexCases\preview.png" />
     <Content Include="Views\Shared\ConfigureTheme.cshtml" />
