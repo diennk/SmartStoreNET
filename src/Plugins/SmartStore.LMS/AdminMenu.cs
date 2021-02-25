@@ -1,5 +1,6 @@
 ﻿using SmartStore.Collections;
 using SmartStore.Web.Framework.UI;
+using System.Web;
 
 namespace SmartStore.LMS
 {
@@ -13,6 +14,17 @@ namespace SmartStore.LMS
                 .Icon("icm icm-icm icm-desktop navbar-icon")
                 .Action("ConfigurePlugin", "Plugin", new { systemName = Plugin.SystemName, area = "Admin" })
                 .ToItem();
+
+            //if (!HttpContext.Current.Request.IsLocal)
+            {
+                var removeIds = new string[] { "sales", "stores", "promotions" };
+                removeIds.Each(x =>
+                {
+                    pluginsNode.Parent.Remove(pluginsNode.Parent.SelectNodeById(x));
+                });
+                
+            }
+
 
             pluginsNode.Parent.Prepend(menuItem);
         }
