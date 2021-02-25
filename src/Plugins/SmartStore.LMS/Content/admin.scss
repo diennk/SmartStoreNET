@@ -3,10 +3,6 @@
 .navbar-brand{
     display: none
 }
-
-.navbar-brand::after{
-    display: block;
-    width: 100px;
-    height: 50px;
-    background-color: white
+#navbar-menu .navbar-brand {
+    display: block
 }

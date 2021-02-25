@@ -79,5 +79,9 @@ namespace SmartStore.LMS.Controllers
             return result;
         }
 
+        public ActionResult ReplaceAdminLogo()
+        {
+            return View();
+        }
     }
 }

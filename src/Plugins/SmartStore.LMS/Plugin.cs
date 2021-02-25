@@ -2,6 +2,7 @@
 using SmartStore.LMS;
 using SmartStore.LMS.Settings;
 using SmartStore.Services;
+using SmartStore.Services.Cms;
 using SmartStore.Services.Configuration;
 using SmartStore.Services.Tasks;
 using System;
@@ -10,7 +11,7 @@ using System.Web.Routing;
 
 namespace SmartStore.LMS
 {
-    public class Plugin : BasePlugin, IConfigurable
+    public class Plugin : BasePlugin, IConfigurable, IWidget
     {
         private readonly ISettingService _settingService;
         private readonly ICommonServices _services;
@@ -31,6 +32,22 @@ namespace SmartStore.LMS
             actionName = "Configure";
             controllerName = "LMS";
             routeValues = new RouteValueDictionary() { { "area", "SmartStore.LMS" } };
+        }
+
+        public void GetDisplayWidgetRoute(string widgetZone, object model, int storeId, out string actionName, out string controllerName, out RouteValueDictionary routeValues)
+        {
+            actionName = "ReplaceAdminLogo";
+            controllerName = "LMS";
+            routeValues = new RouteValueDictionary()
+            {
+                {"area", SystemName },
+                //{"widgetZone", widgetZone}
+            };
+        }
+
+        public IList<string> GetWidgetZones()
+        {
+            return new List<string> { "admin_menu_before" };
         }
 
         public override void Install()
