@@ -10,16 +10,18 @@
 
 <nav class="menubar navbar navbar-slide">
     <nav class="menubar-group ml-0">
+        <a class="menubar-link font-weight-700" href="/">Training</a>
+
         @*@{
             Html.RenderAction("LanguageSelector", "Common");
             Html.RenderAction("CurrencySelector", "Common");
         }*@
         @if (Model.HasContactUsPage)
         {
-            <a class="menubar-link" href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a>
+            @*<a class="menubar-link" href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a>*@
         }
 
-        @{ Html.SmartStore().Menu().Name("HelpAndService").Template("Dropdown").Render(); }
+        @*@{ Html.SmartStore().Menu().Name("HelpAndService").Template("Dropdown").Render(); }*@
     </nav>
 
 	<nav class="menubar-group ml-auto">
@@ -40,21 +42,21 @@
     <nav class="menubar-group menubar-group--special">
         @if (Model.NewsEnabled)
         {
-            <a class="menubar-link" href="@Url.RouteUrl("NewsArchive")">
+            @*<a class="menubar-link" href="@Url.RouteUrl("NewsArchive")">
                 @T("News")
-            </a>
+            </a>*@
         }
         @if (Model.BlogEnabled)
         {
-            <a class="menubar-link" href="@Url.RouteUrl("Blog")">
+            @*<a class="menubar-link" href="@Url.RouteUrl("Blog")">
                 @T("Blog")
-            </a>
+            </a>*@
         }
         @if (Model.ForumEnabled)
         {
-            <a class="menubar-link" href="@Url.RouteUrl("Boards")">
+            @*<a class="menubar-link" href="@Url.RouteUrl("Boards")">
                 @T("Forum.Forums")
-            </a>
+            </a>*@
         }
         @{ Html.RenderWidget("header_menu_special_after"); }
     </nav>
