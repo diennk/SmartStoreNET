@@ -1,0 +1,8 @@
+﻿FriendlyName: LMS
+SystemName: SmartStore.LMS
+Group: CMS
+Version: 4.1.1
+MinAppVersion: 4.1.1
+DisplayOrder: 1
+FileName: SmartStore.LMS.dll
+ResourceRootKey: Plugins.LMS
